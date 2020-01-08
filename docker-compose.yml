@@ -2,12 +2,9 @@ version: '3'
 services:
   backend1:
     build: backend
-  backend2:
-    build: backend
   haproxy:
     build: haproxy
     ports:
     - "4481:80"
     depends_on:
     - backend1
-    - backend2
